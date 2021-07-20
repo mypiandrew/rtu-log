@@ -26,7 +26,7 @@
         apt-get install sqlite3 libsqlite3-dev libmodbus5 libmodbus-dev
 
         Compile as below or use 'make all' to allow program to use external system (.so) libraries
-        gcc log.c -o log -lsqlite3 -lmodbus -lm
+        gcc rtu.c -o rtu -lsqlite3 -lmodbus -m
 
 
 */

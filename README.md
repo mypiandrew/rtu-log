@@ -6,7 +6,7 @@
 
 Compile as below or use 'make all'
 
-```gcc log.c -o log -lsqlite3 -lmodbus -m```
+```gcc rtu.c -o rtu -lsqlite3 -lmodbus -m```
 
 ```
 ./rtu [-h|j|c] [-d]

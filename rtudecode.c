@@ -48,6 +48,6 @@ void decodeRtuUnits()
 					// Nothing to do 
 					break;						
 					
-		}	// Switch on device type
-	} // loop on available devices
-} // function
+		}
+	} 
+} 

@@ -20,17 +20,8 @@
         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
-		
-		int numRegisters;				//  Total number of registers enabled to scan fr
-		int ChanMode[8];				//  Per-chan mode, this gives the chan setting or mode e.g.ADC this is the resolution setting for Digin this the chan mode 
-		int regAddress[MAX_DATAPOINTS]; //  addess minus the 40000 multiier, total  max registers per device              	
-		float value[MAX_DATAPOINTS];	// 	decoded (and then scaled) value for the register	
-		
-		
-		
-*/	
-
 			
+*/	
 
 void displayDigInValues(int deviceId, int displayType)
 {
@@ -196,10 +187,5 @@ void displayDigInValues(int deviceId, int displayType)
         printf(";\n");
 
 	}
-
-
-
-
-
 
 }

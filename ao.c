@@ -87,10 +87,5 @@ void displayAoValues(int deviceId, int displayType)
 		                    deviceId,dataSource[deviceId].deviceType,dataSource[deviceId].modbusId,
 							(chanLve[1]/100),(chanLve[2]/100),(chanLve[3]/100),(chanLve[4]/100) );	
 	}
-
-
-
 	
 }
-
-

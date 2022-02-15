@@ -65,13 +65,16 @@ int getModbusValues()
 		
         // Enable/Disable Modbus debug
         modbus_set_debug(mb, FALSE);
+		
+	modbus_flush(mb);		
 
 		// check we can connect (not sure if this is relevant on serial modbus)
         if(modbus_connect(mb) == -1)
         {
                 printf("Connect Failed to Modbus ID [%i] on [%s]\n", dataSource[deviceId].modbusId, 
 				                                                     dataSource[deviceId].interface);
-                modbus_close(mb);
+                modbus_flush(mb);
+		modbus_close(mb);
                 modbus_free(mb);
                 return -1;
         }
@@ -224,6 +227,7 @@ int getModbusValues()
 				if (rc == -1)
 				{
 					printf("Modbus request Fail : Device Address [%i] Start Address [%i] For [%i] Registers \n", dataSource[deviceId].modbusId,(wStartReg-1),(requestedRegisters+1) );
+					modbus_flush(mb);
 					modbus_close(mb);
 					modbus_free(mb);
 					return -1;
@@ -246,6 +250,7 @@ int getModbusValues()
 		
 	} // device ids to process for loop
 	
+	modbus_flush(mb);
 	modbus_close(mb);
 	modbus_free(mb);
 

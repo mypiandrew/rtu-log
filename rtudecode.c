@@ -33,7 +33,8 @@ void decodeRtuUnits()
 		{			
 			default:
 			case RTU_AI8: // [1] -  RTU-AI8
-					decodeAdcModbusReadings(deviceId);
+					// Only needed if ADC unit is in raw output mode
+					//decodeAdcModbusReadings(deviceId);
 					break;
 			case RTU_DI8: // [2] -  RTU-DI8
 					// Nothing to do 
